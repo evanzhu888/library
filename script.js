@@ -70,7 +70,10 @@ function display(Book) {
             case 3:
                 td1.textContent = "Read?";
                 tr1.appendChild(td1);
-                td2.textContent = Book.read? "yes": "no";
+                const toggle = document.createElement("input");
+                toggle.setAttribute("type", "checkbox");
+                toggle.checked = Book.read;
+                td2.appendChild(toggle);
                 tr2.appendChild(td2);
                 break;
             }
