@@ -1,0 +1,22 @@
+fieldset {
+    border: none;
+}
+
+.form {
+    display: none;
+    position:absolute;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.read {
+    display: flex;
+}
+
+td {
+    border: 1px solid black;
+}
+
+table {
+    border: 1px solid black;
+}
