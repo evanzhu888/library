@@ -6,10 +6,8 @@ const pages = document.querySelector("#formPages");
 const read = document.querySelector("#formRead");
 let i = 0;
 
-const book = new Book("dg", "sdf", 16, true);
-myLibrary.push(book);
-display(book);
 //Book Constructor
+/*
 function Book (title, author, pages, read) {
     this.title = title;
     this.author = author;
@@ -19,16 +17,26 @@ function Book (title, author, pages, read) {
 
 Book.prototype.info = function() {
     return this.read? title + " by " + author + ", " + pages + " pages, read" : title + " by " + author + ", " + pages + " pages, not read yet";
-    /*
-    if (this.read) {
-        return title + " by " + author + ", " + pages + " pages, read";
-    } else {
-        return title + " by " + author + ", " + pages + " pages, not read yet";
-    }
-    */
 }
+*/
 
-//
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+    info() {
+        return this.read? title + " by " + author + ", " + pages + " pages, read" : title + " by " + author + ", " + pages + " pages, not read yet";
+    }
+}
+const book = new Book("dg", "sdf", 16, true);
+myLibrary.push(book);
+display(book);
+
+console.log(book.author);
+
 function addBookToLibrary() {
     const book = new Book(title.value, author.value, pages.value, read.checked);
     myLibrary.push(book);
